@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>ASQ@CeBIT</title>
+    <meta name="description" content="ASQ@CeBIT">
+    <meta name="author" content="Vasileios Triglianos">
+    
+    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <script>
+      window.Polymer = window.Polymer || {};
+      window.Polymer.dom = 'shadow';
+    </script>
+    <link rel="import" href="bower_components/polymer/polymer.html"> 
+    <link rel="import" href="bower_components/asq-elements/asq-elements.html">
+    <link rel="import" href="bower_components/asq-canvas/asq-canvas.html">
+
+    <link href="css/impress.css" rel="stylesheet">
+    <link href="css/layout.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/rainbow.css" rel="stylesheet">
+
+    <link rel="import" href="css/shared-styles.html">
+    <style is="custom-style" include="shared-styles"></style>
+    
+  </head>
+
+  <body unresolved>
+    <asq-settings max-num-submissions="-1" slideflow="ctrl" assessment="none"></asq-settings>
+    
+    <div class="fallback-message">
+      <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+      <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    </div>
+
+    <asq-canvas></asq-canvas>
+    
+    <div id="uni-logo-holder">
+      <img id="uni-logo" src="img/logo_info_color_en.svg" alt="University logo"/>
+    </div>
+
+    <div class='datGif'></div>
+
+    <div id="impress">
+
+      <div id="splash" class="step flash text-center plain" data-scale="0.4" data-rotate="0">
+        <!-- <h2 class="pastel-blue">ASQ</h2> -->
+        <!-- <img src="img/ASQLogoBlack.png" height="100" alt="ASQ Logo"> -->
+        <div id="asq-logo">
+          <img class="anim a" src="svg/a.svg">
+          <img class="anim backfacing a" src="svg/a.svg">
+          <img class="anim s" src="svg/s.svg">
+          <img class="anim backfacing s" src="svg/s.svg">
+          <img class="anim q" src="svg/q.svg">
+          <img class="anim backfacing q" src="svg/q.svg">
+        </div>
+        <h5 id="presentationTitle" class="pastel-blue no-shadow">Making classroom lectures interactive</h5>
+        <p class="small" style="margin-top:1em;"><!-- <em class='grey'>Vasileios Triglianos</em> -->
+          <a href="mailto:vasileios.triglianos@usi.ch">vasileios.triglianos@usi.ch</a>
+          <img src="svg/twitter.svg" style="height:30px; position:relative; top:4px;" alt="twitter-logo"><a href="https://twitter.com/asqjs">@asqjs</a> <br>
+        </p>
+        <asq-welcome></asq-welcome>
+        <div class="notes">
+          Ladies and gentleman welcome to the last talk in the Swiss Pavilion. I am Vassilis Triglianos and I will try to make this talk the most interactive one. As a matter of fact, this talk is about making interactive talks with ASQ. I invite you to connect to this presentation using this URL, which I will leave at the top of the slides for a while longer.
+        </div>
+      </div>
+
+      <div id="why" class="step flash plain text-center" data-scale="0.4">
+        <h1 class="pastel-blue alsscripticus"> Why ASQ?</h1>
+        <div class="notes">
+          Why do we need interactive lectures? Although in our journey with ASQ we have found a lot of reasons, the main motivation was due to three reasons: audience engagement, and presenter cognitive load and awareness.
+        </div>
+      </div>
+
+      <div id="back-to-hall" class="step flash plain  text-center" data-scale="0.4">
+        <div class="autostep" style="display:inline-block;">
+          <div class="byline"><div class="classy"> The</div></div>
+          <h5><strong>Lecture Hall</strong></h5>
+          <div class="unbrokenline"></div>
+        </div>
+        <div class="notes">
+        </div>
+      </div>
+
+
+      <div id="hall" class="step flash plain  text-center" data-scale="0.4" style="width: 1440px;">
+        <div class="notes">
+           Let's take a closer look at the lecture hall. This is what a modern lecture halls look like. In a lot of disciplines like Computer science, computational biology and more, computers are an integral part of the education since there is programming involved. We think they are so important that in the University of Lugano we give our first year students, be it Bachelor or Master, a laptop to user for the rest of their learning journey. But even in other disciplines, like The Missouri School of Journalism where this photo is from, students use smart devices for note taking, accessing education material, communicating and, well ....
+        </div>
+      </div>
+
+      <div id="hall-text" class="step flash plain  text-center" data-scale="0.4" style="width: 1440px;">
+
+        <div class="layout horizontal" style="height: 1200px;">
+          <div class="flex three"></div>
+          <div class="flex two layout vertical center-justified side-column" style="background-color: rgba(19, 43, 72, 0.94);  color: white;  text-transform: uppercase;  font-weight: 200;">
+            <div style="padding: 0 50px;">Smart devices are an <strong>integral</strong> part of education.</div>
+          </div>
+          <div class="flex"></div>
+        </div>
+        <div class="notes">
+           Let's take a closer look at the lecture hall. This is what a modern lecture halls look like. In a lot of disciplines like Computer science, computational biology and more, computers are an integral part of the education since there is programming involved. We think they are so important that in the University of Lugano we give our first year students, be it Bachelor or Master, a laptop to user for the rest of their learning journey. But even in other disciplines, like The Missouri School of Journalism where this photo is from, students use smart devices for note taking, accessing education material, communicating and, well ....
+        </div>
+      </div>
+
+      <div id="procrastinate" class="step flash plain text-center" data-scale="0.4">
+       <!--  <div class="box-shadow">
+          <img src="img/procrastinate_lecture.jpg" width="800" alt="Procrastinate 1">
+        </div> -->
+        <div class="notes"> ...distracting themselves. Here for example, we see students looking at images from imgur.co,, which, could be considered also an educational website if Internet memes are your thing. It's not very clear from this picture but only a couple of students follow the beamer material. We have to face it, the frontal lecture paradigm of an active lecturer and a passive audience is not very engaging.</div>
+      </div>
+
+      <div id="no-laptops" class="step flash plain  text-center" data-scale="0.4">
+        <div class="box-shadow">
+          <img src="img/no-laptops.jpg" width="750" alt="Procrastinate 1">
+        </div>
+        <div class="notes">And yet people are not willing to leave their devices behind. So we might as well use them for education. So this is the first thing that we want to achieve with ASQ:  </div>
+      </div>
+
+      <div id="distraction-tool" class="step flash plain  text-center" data-scale="0.4" style="width: 1440px;">
+
+       <div class="autostep" style="display:inline-block;">
+            <div class="byline"><div class="classy">Turn devices from</div></div>
+            <h5>sources of <strong>Distraction</strong></h5>
+            <div class="byline"><div class="classy">to</div></div>
+            <h5>affordances of <strong>Learning</strong></h5>
+            <div class="unbrokenline"></div>
+            <div class="notes">
+              Well
+            </div>
+          </div>
+        <div class="notes">
+           turn them from a distraction tool to a learning tool.
+        </div>
+      </div>
+
+       <div id="what-is-asq" class="step flash plain break text-center" data-scale="0.4">
+        <img src="svg/a.svg"><span id="a-sub-expansion" class="logo-expansion">nswers</span>
+        <img src="svg/s.svg"><span id="s-sub-expansion" class="logo-expansion">lides</span>
+        <img src="svg/q.svg"><span id="q-sub-expansion" class="logo-expansion">uestions</span>
+        <div id="s-sub" class="substep"></div>
+        <div id="q-sub" class="substep"></div>
+        <div id="a-sub" class="substep"></div>
+        <div class="notes">So how to we engage students to educational interactions? We have slides that can have questions for which the users give answers. In more detail, ASQ is a Web platform for interactive HTML slides, that allows you to interleave questions in them and receive answers from your audience in real time. Admittedly, the main job of a presenter is to engage their audience. And we use a lot of ways to do that. Assume for example that I wanted to find more about your professional background so that I could adapt my talk. I could do a show of hands or a voice vote. Who works in research and education?... Who works in IT consulting and so on... But this is hard to scale or accurately measure. Or I could just do this..</div>
+       </div>
+
+      <div id="bg-check" class="step flash plain break" data-scale="0.4">
+        <asq-exercise>
+          <stem><h4 class="pastel-blue medium"> Hello, tell us a little bit about your background
+          </h4></stem>
+          <asq-multi-choice-q>
+              <asq-option name="it" class="small">IT</asq-option>
+              <asq-option name="finance" class="small">Financial Sector</asq-option>
+              <asq-option name="academia" class="small">Academia</asq-option>
+              <asq-option id="option-other" name="other" class="small">Other</asq-option>
+          </asq-multi-choice-q><br>
+          <asq-text-input-q label="other" id="ti-1">
+          </asq-text-input-q>
+        </asq-exercise>
+        <div class="notes">ASQ allows me to put this question directly in my slide. It gives me realtime aggregation of the resutls. Presentation-wise,  It matches my slideshow styles and I don't have to switch to another tool. Whenever I want I can share the statistics to the audience to give them feedback and engage in meaningful conversations. But is ASQ is much more than multi-choice questions in slides.</div>
+      </div>
+
+      <div id="bg-check-results" class="step flash plain break" data-scale="0.4">
+        <asq-text-input-q-stats for="ti-1"></asq-text-input-q-stats>
+      </div>
+
+      <div id="hall-2" class="step plain  text-center" data-x="7200" data-y="0">
+        <div class="notes">
+        Let's go back to the lecture. Look at all these students. It's impossible to track the learning progress of each one of them during a lecture.
+        </div>
+      </div>
+
+      <div id="mc" class="step flash plain break" data-scale="0.4">
+        <asq-exercise>
+          <asq-multi-choice-q>
+            <stem><h4 class="pastel-blue medium"> Typically, teachers give the greatest attention to _ _ _ of the students?
+            </h4></stem>
+              <asq-option name="o-100" class="small">100%</asq-option>
+              <asq-option name="o-75" class="small">75%</asq-option>
+              <asq-option name="o-66" class="small">66%</asq-option>
+              <asq-option name="o-50" class="small">50%</asq-option>
+              <asq-option name="o-33" class="small" correct>33%</asq-option>
+              <asq-option name="o-25" class="small">25%</asq-option>
+              <asq-option name="o-0" class="small">0%</asq-option>
+          </asq-multi-choice-q>
+        </asq-exercise>
+        <div class="x-small muted">Benjamin S. Bloom, "The 2 Sigma Problem: The Search for Methods of Group Instruction as Effective as One-to-One Tutoring", Educational Researcher Vol. 13, No. 6
+</div>
+        <div class="notes">There is research from the  80s that shows that its hard to cater to the needs of all the students in a classroom</div>
+      </div>
+
+
+      <div id="headache" class="step flash plain text-center" data-scale="0.4">
+        <h4 class="substep">Cognitive load</h4>
+        <div class="notes">Modern pedagogies like active learning and constructivism dictate interactions with the taught material that go beyond simple multi-choice questions. Educators are faced with higher cognitive load when they need to gather, assess and give feedback for solving equations, programming or describing chemical reactions exercise. And they have to do this while they should still pay attention to the rest of their educational duties like making sure students are engaged, manage classroom time, follow the curriculum and more.</div>
+      </div>
+
+      <div id="thinking-fast" class="step flash plain text-center hide-counter" data-scale="0.4">
+        <div class="notes">
+        Human performance is produced by controlled and processes
+        Automatic processes happen rapidly occur without intention. They are not subject to conscious monitoring and utilize few, if any, attentional resources.
+
+        Controlled processes occur in the working memory (a limited resource). They are effortful and slow.
+        These procesess operate independently but intersect at certain points
+        Information processing occurs simultaneously in both pathways.
+        Conflicts are mediated in the working memory which results in a performance drop
+        </div>
+      </div>
+
+      <div id="mission" class="step flash plain text-center hide-counter break" data-scale="0.4" data-z="400" data-rotate="0">
+          <div class="autostep" style="display:inline-block;">
+            <div class="byline"><div class="classy">Utilize the Web to enable</div></div>
+            <h5>Modern <strong>Pedagogies</strong></h5>
+            <div class="byline"><div class="classy"> and increase</div></div>
+            <h5>Teacher <strong>Awareness</strong></h5>
+            <div class="byline"><div class="classy">as well as</div></div>
+            <h5>Student <strong>Engagement</strong></h5>
+            <div class="byline"><div class="classy"> in order to achieve greater</div></div>
+            <h5><strong>Educational Outcomes</strong></h5>
+            <div class="unbrokenline"></div>
+            <div class="notes">
+              Well
+            </div>
+          </div>
+          <div class="notes">These reasons dictate our vision for the future classroom. And following modern pedagogies translates to our need for more advanced question types.</div>
+        </div>
+
+
+      <div id="expressiveness" class="step flash plain text-center" data-scale="0.4">
+        <div class="layout vertical" style="width: 800px; margin: 0 auto;">
+          <div class="layout horizontal justified flex">
+            <img style="height:400px;" src="img/teacher-1.png" alt="teacher-1">
+            <img style="height:400px;" class="substep" src="img/teacher-2.png" alt="teacher-2">
+          </div>
+          <div class="layout horizontal justified flex">
+            <img style="height:400px;" class="substep" src="img/teacher-3.png" alt="teacher-3">
+            <img style="height:400px;" class="substep" src="img/teacher-4.png" alt="teacher-4">
+          </div>
+        </div>
+        <div class="notes">
+          The finaly reason we made ASQ is to address different teaching, or if you will presentational styles. We have professors that follow different pedagogies. Other more theoritical or practical, game based or discussion based. ASQ allows you to create your own question types, follow your flow of presentation and ask the questions whenever you want.
+        </div>
+      </div>
+
+      <div id="complex" class="step flash plain text-center" data-scale="0.4" data-x="1000">
+        <h4 class="pastel-blue small"> We need more than multi-choice questions </h4><br>
+          <asq-exercise style="max-height: 800px; overflow-y: scroll;">
+          
+          <asq-buckets-q
+            class="small"
+            mode="1-3" 
+            x-matchable="div[buckets]" 
+            y-matchable="div[labels]" 
+            attr-for-matched="s-name"
+            matched-attribute="matched"
+            label-container="[labels]"
+            matched-class="label-success">
+
+            <asq-stem>Place each language to the appropriate bucket</asq-stem>
+
+            <br>
+            
+              <div buckets class="small">
+                <div s-name="functional" class="bucket">Functional (Pure)</div>
+                <div s-name="object-oriented" class="bucket">Object Oriented</div>
+              </div>
+              
+              <div labels class="small">
+                <div s-name="java" label class="label label-primary">Java</div>
+                <div s-name="haskell" label class="label label-primary">Haskell</div>
+                <div s-name="elm" label class="label label-primary">Elm</div>
+                <div s-name="csharp" label class="label label-primary">C#</div>
+                <div s-name="objective-c" label class="label label-primary">Objective-C</div>
+              </div>
+
+              <div style="clear:both; float:none;"></div>
+
+          </asq-buckets-q>
+
+
+        </asq-exercise>
+      <div class="notes">
+      </div>
+      </div>
+
+      <div id="asq-highlight" class="step flash plain break" data-scale="0.4" data-x="4000">
+        <asq-exercise>
+          <asq-stem><h4 class="grey small" style="margin:10px; 0;">The <code style="display:inline;">&lt;asq-highlight-q&gt;</code> question type plugin</h4></asq-stem>
+          <asq-highlight-q style="height:550px; font-size:0.7em;" theme="textmate" mode="java" role="viewer" font-size="0.6em">
+            <asq-hl-color-task color="d9534f">Visibility Modifiers</asq-hl-color-task>
+            <asq-hl-color-task color="428bca">Variable Declarations</asq-hl-color-task>
+            <asq-hl-color-task color="f0ad4e">Other keywords</asq-hl-color-task>
+    <code>public class C {      
+ public void m() {
+   int i = i + 5 + ((int)5.0);
+ }
+}</code>
+            </asq-highlight-q>
+          </asq-exercise>
+          <div class="notes">
+            Taking a closer look to the asq-highlight-q plugin revals that it's just and element with that contains some task elements. It's styles are nicely encapsulated with the Shadow DOM as is it's structure. Let me show you that it just one tag.
+          </div>
+      </div>
+
+      <div id="architecture" class="step flash plain">
+        <img class="svg" src="svg/asqDevices.svg" alt="architecture" style="width: 100%;">
+      </div>
+
+
+      <div id="procrastinate-2" class="step flash plain  text-center" data-scale="0.4">
+<!--         <div class="box-shadow">
+          <img src="img/procrastinate_lecture.jpg" width="800" alt="Procrastinate 1">
+        </div> -->
+        <div class="notes">this</div>
+      </div>
+
+
+      <div id="in-action-1" class="step flash plain  text-center" data-scale="0.4">
+        <div class="notes">this</div>
+      </div>
+
+      <div id="asq-cycle" class="step flash plain  text-center" data-scale="0.4">
+        <img class="svg" src="svg/asq-cycle.svg" style="width:100%;">
+        <div class="layout horizontal justified center" style="height: 300px;">
+          <div style="width: 270px; overflow-x: hidden;">
+            <img class="substep" src="img/logo_info_color_en.svg" alt="University of Lugano logo">
+          </div>
+          <img class="substep" src="svg/tu-delft.svg" style="height: 80px;" alt="TU Delft logo">
+          <img class="substep" src="svg/STU-FIIT-nfv.svg" style="height: 160px;" alt="STU FIIT logo">
+        </div>
+        <div class="notes">
+          
+        </div>
+      </div>
+
+<!--       <div id="in-action-2" class="step flash plain  text-center" data-scale="0.4">
+       <video style="width: 100%;" src="video/ASQ-Cycle-Compilation.mp4"> </video>
+        <div class="notes">this</div>
+      </div> -->
+
+    <div id="feeedback-for-asq" class="step flash plain text-center" data-scale="0.4">
+      <div class="layout horizontal">
+        <div class="flex">
+          <h4 class="pastel-blue alsscripticus">Professors</h4>
+            <ul class="smaller text-left">
+              <li class="substep" style="margin-bottom: 10px;">"With ASQ students can try to answer anonymously and still get useful feedback when their solution is shared and discussed with everyone."</li>
+              <li class="substep">"When we switch from broadcasting slides to sending questions the audience engagement goes through the roof."</li>
+            </ul>
+        </div>
+        <div class="flex">
+          <h4 class="orange alsscripticus" style="text-shadow: 1px 1px 1px rgba(94, 94, 94, 0.5);">Students</h4>
+            <ul class="smaller text-left">
+              <li class="substep" style="margin-bottom: 10px;">"I love the program! It's great that it's a presentation and  question platform at the same time."</li>
+              <li class="substep">"asq-sqlite rocks!"</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="search-for-insights" class="step flash plain text-center" data-scale="0.4">
+      <h2>Searching for Insights</h2>
+    </div>
+
+     <div id="search-for-insights-2" class="step flash plain text-center" data-scale="0.4" style="width:1200px;">
+        <div class="layout vertical">
+          <div class="layout horizontal" style="height: 395px;">
+            <div class="flex substep" style="position:relative;">
+              <img src="img/interactions.jpg" style="height: 395px;">
+              <h5 class="small" style="position: absolute; top: 140px; left: 90px; font-weight: bold; text-shadow: 1px 1px 1px rgba(94, 94, 94, 0.5); width: 350px;">New Communication Channel</h5>
+            </div>
+            <div class="flex substep" style="position:relative;">
+              <img src="img/sleeping-class.jpg" style="height: 395px;">
+              <h5 class="small" style="position: absolute; top: 160px; left: 130px; font-weight: bold; text-shadow: 1px 1px 1px rgba(94, 94, 94, 0.5); width: 350px;">Student Attention</h5>
+            </div>
+          </div>
+          <div class="layout horizontal center-justified flex substep" style="position:relative;">
+            <img src="img/math_heatmap.png" style="height: 100%; font-weight: bold; text-shadow: 1px 1px 1px rgba(94, 94, 94, 0.5);">
+            <h5 style="position: absolute; top: 120px; left: 395px; font-weight: bold; text-shadow: 1px 1px 1px rgba(55, 55, 55, 0.8); font-size: 0.88em;">Question Difficulty</h5>
+          </div>
+        </div>
+        
+        
+       
+    </div>
+
+    <div id="checklist" class="step flash plain text-center hide-counter" data-scale="0.4">
+      <ul class="dash small text-left" style="color: white; font-weight: 400;">
+        <li class="substep" style="margin-top:0.6em;"><strong>Broadcast</strong> your slides and get <strong>Live</strong> feedback from your audience</li>
+        <li class="substep" style="margin-top:0.6em;">Engage your audience by <strong>Embedding Questions</strong> in your HTML/PDF Slides</li>
+        <li class="substep" style="margin-top:0.6em;">Scale to <strong>100s</strong> of Students</li>
+        <li class="substep" style="margin-top:0.6em;">Questions are <strong>plugins</strong>. You can write your own!</li>
+        <li class="substep" style="margin-top:0.6em;">Turn Students’ Smartphones from Distractions into <strong>Learning</strong> Tools</li>
+      </ul>
+    </div>
+
+     <div id="thank-you" class="step flash plain text-center" data-scale="0.4">
+        <h2 class="pastel-blue alsscripticus">Thank you</h4>
+        <a style="color:white;" href="http://asq.inf.usi.ch/">http://asq.inf.usi.ch/</a>
+     </div>
+
+
+     <div id="asq-highlight-editor" class="step flash plain" data-support="true" data-scale="0.4">
+     </div>
+  
+
+      <div id="overview" class="step flash" data-scale="0.4" data-z="1000" data-scale="10"></div>
+    </div>
+
+    <div id='connect-url' onclick="this.style.display='none';">
+      <asq-welcome></asq-welcome>
+    </div>
+
+    <div id="progress">
+      
+    </div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/svg-injector/dist/svg-injector.min.js"></script>
+    <script src="bower_components/asq-impress-js/js/impress.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script src="js/main.js"></script>
+
+    <script type="text/javascript">
+      Polymer.dom(document).querySelectorAll('asq-exercise').forEach(function(ex){
+        ex.confidence=false;
+        ex.removeAttribute('confidence');
+      });
+    </script>
+
+    <script type="text/javascript">
+      var images = new Array()
+            function preload() {
+              for (i = 0; i < preload.arguments.length; i++) {
+                images[i] = new Image()
+                images[i].src = preload.arguments[i]
+              }
+            }
+            preload(
+              "img/teacher_overload.jpg",
+              "img/delivery.jpg",
+              "img/teacher_overload.jpg",
+              "img/thinking-fast-slow.jpg",
+              "img/piechart-macro.jpg",
+              "img/checklist.jpg",
+              "img/bratislava_class.jpg",
+              "img/Macs-Missouri-School-of-Journalism_16_9.jpg",
+              "img/imgur-distraction.jpg",
+              "img/devices.jpg",
+              "img/asq-highlight-editor.gif"
+            )
+    </script>
+    <script type="text/javascript">
+
+    $(function(){
+      var total = $('.step:not(#overview)').filter('.step[data-support!="true"]').length;
+      $(document).on('impress:stepenter', function(e) {
+        if (e.target.id == 'overview'){
+          $('#progress').css('width', '0%');
+          return;
+        }
+
+        if (e.target.dataset.support == 'true') return;
+
+        var index = $(e.target).index() + 1
+          , perc = index/total * 100;
+        $('#progress').css('width', perc + '%')
+        $('#progress').css('background', $('.pastel-blue').css('color'));
+      });
+    });
+    </script>
+
+    <script type="text/javascript">
+      var opt = document.getElementById('option-other');
+      var ti = document.getElementById('ti-1');
+      ti.style.display = "none";
+      opt.addEventListener("checked-changed", function(evt){
+        ti.style.display = (evt.detail.value===true) ? "block" : "none";
+      })
+    </script>
+
+    <script type="text/javascript">
+      
+      document.addEventListener("impress:substepenter", function(evt){
+        var ids=["s-sub", "q-sub", "a-sub"]
+        var idx;
+        if(evt.target 
+          && (idx = ids.indexOf(evt.target.id)) >= 0){
+          try{
+            // document.getElementById(evt.target.id + "-expansion").classList.add(active);
+            for(var i=0; i < ids.length; i++){
+              if(i <= idx){
+                document.getElementById(ids[i] + "-expansion").classList.add("active");
+              }else{
+                document.getElementById(ids[i] + "-expansion").classList.remove("active");
+              }
+            }
+          }catch(err){
+            console.log("Could not find associated letter expansion")
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
+

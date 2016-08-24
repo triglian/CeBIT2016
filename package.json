@@ -1,0 +1,28 @@
+{
+  "name": "CeBIT2016",
+  "version": "0.0.1",
+  "description": "ASQ presentation in CeBIT 2016",
+  "main": "index.js",
+  "dependencies": {
+    "node-svg-injector": "triglian/node-svg-injector"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "install": "bower install",
+    "svginject": "nodeSVGInjector -o index-svginjected.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Web",
+    "Atelier",
+    "USI",
+    "Cesare",
+    "Pautasso",
+    "AJAX",
+    "WebSockets"
+  ],
+  "authors": [
+    "Vasileios Triglianos"
+  ],
+  "license": "MIT"
+}
